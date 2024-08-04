@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TochikVPN - Быстрый VPN</title>
+    <link rel="shortcut icon" href="u_ajax.png" />
+    <style>
+      @font-face {
+        font-family: "Monstera";
+        src: url(Monstera/Montserrat-Bold.ttf);
+      }
+      @font-face {
+        font-family: "Monsteralow";
+        src: url(Monstera/Montserrat-Light.ttf);
+      }
+      .html {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        scroll-behavior:smooth
+      }
+      .body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url(back2.jpg);
+        background-position:center;
+        background-attachment: fixed;
+      }
+      .headerstyle {
+        width: 100%;
+        height: 7%;
+        display: flex;
+        flex-flow: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        flex-flow: nowrap;
+        font-size: 1.3em;
+        padding: 0;
+      }
+      .logo {
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 1.9em;
+        font-weight: 600;
+        font-family: Monstera, sans-serif;
+        color: rgb(200, 200, 200);
+        transition: 0.3s;
+      }
+      .logo:hover {
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 1.9em;
+        font-weight: 600;
+        font-family: Monstera, sans-serif;
+        color: rgb(200, 200, 200);
+
+      }
+      .point {
+        margin: 15px;
+        transition: 0.5s;
+      }
+      .point:hover {
+        margin: 10px;
+        transform: scale(1.1);
+      }
+      .active {
+        text-decoration: none;
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        transition: 0.3s;
+      }
+      .active:hover {
+        text-decoration: none;
+        color: rgb(173, 86, 219);
+        font-family: Monsteralow, sans-serif;
+
+      }
+      
+      .content {
+        width: 100%;
+        height: 100%;
+
+      }
+      .footer {
+        width: 100%;
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: center;
+        align-items:center ;
+        position: absolute;
+        height: 7%;   
+      }
+      .active2{
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(136, 136, 136);
+        font-family: Monsteralow, sans-serif;
+        transition: 0.3s;
+
+      }
+      .active2:hover{
+        text-decoration: none;
+        color: rgb(218, 218, 218);
+        font-family: Monsteralow, sans-serif;
+        font-size: 13px;
+
+      }
+      .point2 {
+        margin: 15px;
+      }
+      .contentmain {
+        margin-left: auto;
+        margin-right: auto;
+        width: 48.4%;
+        padding-top: 1.5%;
+
+      }
+      .textcontent{
+        color: rgb(200, 200, 200);
+        font-family: Monstera, sans-serif;
+        font-weight: 600;
+        font-size: 1.9em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      .buttonmenu{
+        list-style: none;
+        display: flex;
+        flex-flow: nowrap;
+        padding: 0;
+        justify-content: center;
+      }
+      .point3{
+        margin-right: 15px;
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        padding: 1.5%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        background-color: rgb(42, 42, 42);
+        border-radius: 25px;
+        transition: 0.3s;
+      }
+      .point3:hover {
+        margin-right: 15px;
+        color: rgb(226, 226, 226);
+        font-family: Monsteralow, sans-serif;
+        padding: 1.5%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        background-color: rgb(173, 86, 219);
+        border-radius: 25px;
+        transform: scale(1.1);
+      }
+      .text{
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+
+      }
+      .buttonmenu2 {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+      .point4 {
+        margin-top: 25px;
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        padding: 1.5%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        background-color: rgb(42, 42, 42);
+        border-radius: 25px;
+        width: auto;
+        display:inline-block;
+        margin-right: 30px;
+        transition: 0.3s;
+      }
+      .point4:hover {
+        margin-top: 25px;
+        color: rgb(226, 226, 226);
+        font-family: Monsteralow, sans-serif;
+        padding: 1.5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        background-color: rgb(173, 86, 219);
+        border-radius: 25px;
+        width: auto;
+        display:inline-block;
+        margin-right: 30px;
+        transform: scale(1.1);
+      }
+      .textcontent2 {
+        color: rgb(200, 200, 200);
+        font-family: Monstera, sans-serif;
+        font-weight: 600;
+        font-size: 1.9em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .text2 {
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+      .downloadmenu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-flow: nowrap;
+        background-color: rgb(42, 42, 42);
+        border-radius: 25px;
+      }
+      .downloadpoint {
+        margin-right: 15px;
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        padding: 1.5%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        background-color: rgb(42, 42, 42);
+        border-radius: 25px;
+      }
+      .cardstyle {
+        list-style: none;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+      .card {
+        font-family: Monsteralow, sans-serif;
+        color: aliceblue;
+        display: inline-block;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: rgb(11, 11, 11);
+        border-radius: 20px;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+        margin-top: 25px;
+        transition: 0.3s;
+      }
+      .card:hover {
+        font-family: Monsteralow, sans-serif;
+        color: aliceblue;
+        display: inline-block;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: rgb(173, 86, 219);
+        border-radius: 20px;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+        margin-top: 25px;
+        transform: scale(1.1);
+      }
+      .price {
+        font-size: 40px;
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+      }
+      .month {
+        font-size: 20px;
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+      }
+      .month2 {
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+      .fqacontent{
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        display: flex;
+      }
+      .fqacontent2{
+        color: rgb(200, 200, 200);
+        font-family: Monstera, sans-serif;
+        font-weight: 600;
+        font-size: 1.9em;
+        margin: 0;
+        display: flex;
+        margin-top: 50px;
+      }
+      .regioncontent{
+        color: rgb(200, 200, 200);
+        font-family: Monstera, sans-serif;
+        font-weight: 600;
+        font-size: 1.9em;
+        margin: 0;
+        display: flex;
+        margin-top: 50px;
+        justify-content: right;
+      }
+      .conteinregion{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-flow: nowrap;
+      }
+      .regionblock {
+        list-style: none;
+        padding: 0;
+        width: 300px;
+      }
+      .region {
+        font-family: Monsteralow, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color:rgb(200, 200, 200) ;
+        background-color: rgb(11, 11, 11);
+        padding: 5px;
+        margin: 10px;
+        border-radius: 20px;
+        height: auto;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-content: center;
+        transition: 0.3s;
+      }
+      .region:hover {
+        font-family: Monsteralow, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color:rgb(200, 200, 200) ;
+        background-color: rgb(173, 86, 219);
+        padding: 5px;
+        margin: 10px;
+        border-radius: 20px;
+        height: auto;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-content: center;
+        transform: scale(1.1);
+      }
+      .country {
+        padding-top: 2px;
+        width: 40px;
+        height: 40px;
+        padding-right: 8px;
+      }
+      .countryname {
+        width: 110px;
+      }
+      .download {
+        margin-right: 15px;
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        padding: .5%;
+        padding-left: 3.5%;
+        padding-right: 4.5%;
+        background-color: rgb(173, 86, 219);
+        border-radius: 25px;
+        transition: 0.3s;
+        height: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        transition: 0.3s;
+      }
+      .download:hover {
+        margin-right: 15px;
+        color: rgb(200, 200, 200);
+        font-family: Monsteralow, sans-serif;
+        padding: .5%;
+        padding-left: 3.5%;
+        padding-right: 4.5%;
+        background-color: rgb(173, 86, 219);
+        border-radius: 25px;
+        transition: 0.3s;
+        height: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        transform: scale(1.1);
+      }
+      .bottomd {
+        margin-left: 7px;
+
+      }
+      .zagruzka {
+        padding-top: 5px;
+        width: 35px;
+        height: 35px;
+        padding-right: 8px;
+      }
+
+    </style>
+  </head>
+  <body class="body">
+    <div class="content">
+      <navbar class="header">
+        <div class="headerstyle">
+          <a href="index.html" class="logo">TochikVPN</a>
+          <ul class="menu">
+            <li class="point"><a href="index.html" class="active">Главная</a></li>
+            <li class="point"><a href="#tarif" class="active">Тарифы</a></li>
+            <li class="point"><a href="#FQA" class="active">FQA</a></li>
+            <li class="point"><a href="#regiondos" class="active">Доступные регионы</a></li>
+            <li class="point"><a href="#nasvibir" class="active">Нас выбирают</a></li>
+          </ul>
+        </div>
+      </navbar>
+      <div id="home" class="contentmain">
+        <p class="textcontent">Профессиональный</p>
+        <p class="textcontent">VPN-сервис</p>
+        <ul class="buttonmenu">
+          <li class="point3">Быстро</li>
+          <li class="point3">Безопасно</li>
+          <li class="point3">Надежно</li>
+        </ul>
+        <p class="text2">Быстрая работа с огромным количеством серверов по</p>
+        <p class="text2">всему миру</p>
+        <ul class="buttonmenu">
+          <li class="download"><img src="https://img.icons8.com/?size=100&id=vk3CfSUT5UA6&format=png&color=EBEBEB" alt="" class="zagruzka"><p class="bottomd">Скачать</p></li>
+        </ul>
+
+        <p class="textcontent2">Почему именно мы?</p>
+        <ul class="buttonmenu2">
+          <li class="point4">Полная конфиденциальность Ваших данных и перемещений по сети</li>
+          <li class="point4">Неограниченное количество подключенных устройств</li>
+          <li class="point4">Большой выбор регионов</li>
+          <li class="point4">Бесплатные регионы</li>
+          <li class="point4">Устойчивы к блокировкам</li>
+          <li class="point4">Удобство в использовании</li>
+          <li class="point4">Оплата криптовалютой</li>
+          <li class="point4">Низкие цены</li>
+        </ul>
+        <br id="tarif">
+
+        <p class="textcontent2">Справедливая модель ценообразования</p>
+        <p class="text2">Выберите подходящий Вам тариф</p>
+        <ul class="cardstyle">
+          <li class="card">
+            <p class="price">5.50$</p>
+            <p class="month">/мес.</p>
+            <p class="month2">1 мес.</p>
+          </li>
+          <li class="card">
+            <p class="price">5.00$</p>
+            <p class="month">/мес.</p>
+            <p class="month2">3 мес.</p>
+          </li>
+          <li class="card">
+            <p class="price">4.50$</p>
+            <p class="month">/мес.</p>
+            <p class="month2">6 мес.</p>
+          </li>
+          <li class="card">
+            <p class="price">3.75$</p>
+            <p class="month">/мес.</p>
+            <p class="month2">1 год.</p>
+          </li>
+          <li class="card">
+            <p class="price">2.75$</p>
+            <p class="month">/мес.</p>
+            <p class="month2">2 года.</p>
+          </li>
+        </ul>
+        <br>
+        <br id="FQA">
+        <p class="fqacontent2">F.Q.A</p>
+        <p class="fqacontent">1. Как работает TochikVPN? - TochikVPN скрывает Ваш IP адрес и перенаправляет 
+          Ваш интернет-трафик через зашифрованный VPN-туннель. Это позволяет защитить вашу цифровую деятельность.</p>
+        <br>
+        <p class="fqacontent">2. Как начать пользоваться TochikVPN? - Для подключения к одному из наших серверов
+          , Вам необходимо попасть в личный кабинет с помощью кнопки "начать", сгенерировать лицензионный ключ,
+           выбрать подписочный план, оплатить, скачать приложение для своей платформы и начать пользоваться!</p>
+        <br>
+        <p class="fqacontent">3. У меня возникли проблемы при использовании Вашего сервиса, что делать? 
+          - Рекомендуем обратиться в нашу службу поддержки, все актуальные контакты можно 
+          найти на странице "Контакты".</p>
+        <br>
+        <p class="fqacontent">4. Насколько безопасен TochikVPN? 
+            - Наша политика гарантирует, что Ваши данные не попадут в чужие руки, 
+            в том числе в руки правительства и правоохранительных органов.</p>
+        <br>
+        <p class="fqacontent">5. Нужно ли мне постоянно использовать VPN? 
+        - Единственный способ гарантировать, что Ваше реальное местоположение остаётся скрытым, 
+        а данные в сети зашифрованны - постоянно использовать VPN сервис.</p>
+        <br>
+        <p class="fqacontent">6. Повысится ли моя популярность среди друзей в школе? 
+        - При использовании 4ebur.net спина становится шире, причёска - гуще, зубы - белее,
+         бицепсы - больше. Вы гарантировано получите внимание женщин, уважение друзей 
+         и зависть недоброжелателей.</p>
+        <br>
+        <br id="regiondos">
+        <br>
+        <p class="regioncontent">Доступные регионы</p>
+        <div class="conteinregion">
+          <ul class="regionblock">
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=EKJmSnhl1hWl&format=png&color=000000" alt="" class="country"><p class="countryname">Бельгия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=Mf5IDKBchhlr&format=png&color=000000" alt="" class="country"><p class="countryname">Бразилия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=vZLJDLqVMupW&format=png&color=000000" alt="" class="country"><p class="countryname">Китай</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=Y6y6JrViiFN5&format=png&color=000000" alt="" class="country"><p class="countryname">Бангладеш</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=Y44czWs2GxGq&format=png&color=000000" alt="" class="country"><p class="countryname">Канада</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=WkYxfIuSs2nG&format=png&color=000000" alt="" class="country"><p class="countryname">Андорра</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=KWa9E2qJeoWV&format=png&color=000000" alt="" class="country"><p class="countryname">Аргентина</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=yZkw6DLUD9JM&format=png&color=000000" alt="" class="country"><p class="countryname">Чехия</p></li>
+          </ul>
+          <ul class="regionblock">
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=4H2bz4a1RByw&format=png&color=000000" alt="" class="country"><p class="countryname">Финляндия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=YwnngGdMBmIV&format=png&color=000000" alt="" class="country"><p class="countryname">Франция</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=vRrbNnaD93Ys&format=png&color=000000" alt="" class="country"><p class="countryname">Германия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=ShNNs7i8tXQF&format=png&color=000000" alt="" class="country"><p class="countryname">Великобритания</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=T1fvFkI18Wnk&format=png&color=000000" alt="" class="country"><p class="countryname">Греция</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=a8NjddYEaSXP&format=png&color=000000" alt="" class="country"><p class="countryname">Гайана</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=SGkM8PHzYYTZ&format=png&color=000000" alt="" class="country"><p class="countryname">Гонконг</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=kmfmt0ZNTRS2&format=png&color=000000" alt="" class="country"><p class="countryname">Исландия</p></li>
+          </ul>
+          <ul class="regionblock">
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=QMwZIXW3iBU9&format=png&color=000000" alt="" class="country"><p class="countryname">Индия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=l7MUp3QJ6Xm9&format=png&color=000000" alt="" class="country"><p class="countryname">Иран</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=CWjpjilAQpKB&format=png&color=000000" alt="" class="country"><p class="countryname">Ирак</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=uD0FpqzBiCq1&format=png&color=000000" alt="" class="country"><p class="countryname">Ирландия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=BZLBKOMHVlhk&format=png&color=000000" alt="" class="country"><p class="countryname">Израиль</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=WmOfu4e7Rvp7&format=png&color=000000" alt="" class="country"><p class="countryname">Италия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=wk4EodBhjMKV&format=png&color=000000" alt="" class="country"><p class="countryname">Ямайка</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=FeSjxToMjcoN&format=png&color=000000" alt="" class="country"><p class="countryname">Япония</p></li>
+          </ul>
+          <ul class="regionblock">
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=sRdLQP0c37at&format=png&color=000000" alt="" class="country"><p class="countryname">Кувейт</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=xc2KcVP8KI6Q&format=png&color=000000" alt="" class="country"><p class="countryname">Нидерланды</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=iUYNm0kbGahw&format=png&color=000000" alt="" class="country"><p class="countryname">Норвегия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=vioRCshpCBKv&format=png&color=000000" alt="" class="country"><p class="countryname">Россия</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=fIgZUHgwc76e&format=png&color=000000" alt="" class="country"><p class="countryname">США</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=5cFvmahMQv5S&format=png&color=000000" alt="" class="country"><p class="countryname">Украина</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=sbsb8Sz7qBRn&format=png&color=000000" alt="" class="country"><p class="countryname">Турция</p></li>
+            <li class="region"><img src="https://img.icons8.com/?size=100&id=Qb3hI60dMM5e&format=png&color=000000" alt="" class="country"><p class="countryname">Испания</p></li>
+          </ul>
+        </div>
+        <br>
+        <br id="nasvibir">
+        <br>
+        <p class="textcontent2">Нас выбирают</p>
+        <p class="text2">Пока что нас никто не выбирает</p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="footer">
+        <ul class="menu">
+          <li class="point2"><a href="privacypolicy.html" class="active2">Политика конфиденциальности</a></li>
+          <li class="point2"><a href="termsofuse.html" class="active2">Условия использования</a></li>
+          <li class="point2"><a href="contact.html" class="active2">Контакты</a></li>
+        </ul>
+    </div>
+  </body>
+</html>
+<!--background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 6%;
+        display: flex;
+        flex-flow: nowrap;
+        align-items: center;-->

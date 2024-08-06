@@ -1,0 +1,410 @@
+@font-face {
+  font-family: "Monstera";
+  src: url(Monstera/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Monsteralow";
+  src: url(Monstera/Montserrat-Light.ttf);
+}
+.html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(back2.jpg);
+  background-position: center;
+  background-attachment: fixed;
+}
+.headerstyle {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: left;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-flow: nowrap;
+  font-size: 1.3em;
+  padding: 0;
+}
+.logo {
+  margin-left: 50px;
+  padding-right: 280px;
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 600;
+  font-family: Monstera, sans-serif;
+  color: rgb(200, 200, 200);
+  transition: 0.3s;
+  justify-content: left;
+}
+.logo:hover {
+  margin-left: 50px;
+  padding-right: 280px;
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 600;
+  font-family: Monstera, sans-serif;
+  color: rgb(200, 200, 200);
+  transition: 0.3s;
+  justify-content: left;
+}
+.point {
+  margin: 20px;
+  transition: 0.5s;
+}
+.point:hover {
+  margin: 20px;
+  transform: scale(1.1);
+}
+.active {
+  text-decoration: none;
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  transition: 0.3s;
+}
+.active:hover {
+  text-decoration: none;
+  color: rgb(173, 86, 219);
+  font-family: Monsteralow, sans-serif;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 7%;
+}
+.active2 {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+  font-family: Monsteralow, sans-serif;
+  transition: 0.3s;
+}
+.active2:hover {
+  text-decoration: none;
+  color: rgb(218, 218, 218);
+  font-family: Monsteralow, sans-serif;
+  font-size: 13px;
+}
+.point2 {
+  margin: 15px;
+}
+.contentmain {
+  margin-left: auto;
+  margin-right: auto;
+  width: 48.4%;
+  padding-top: 1.5%;
+}
+.textcontent {
+  color: rgb(200, 200, 200);
+  font-family: Monstera, sans-serif;
+  font-weight: 600;
+  font-size: 1.9em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.buttonmenu {
+  list-style: none;
+  display: flex;
+  flex-flow: nowrap;
+  padding: 0;
+  justify-content: center;
+}
+.point3 {
+  margin-right: 15px;
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  padding: 1.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: rgb(42, 42, 42);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.point3:hover {
+  margin-right: 15px;
+  color: rgb(226, 226, 226);
+  font-family: Monsteralow, sans-serif;
+  padding: 1.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: rgb(173, 86, 219);
+  border-radius: 25px;
+  transform: scale(1.1);
+}
+.text {
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+}
+.buttonmenu2 {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.point4 {
+  margin-top: 25px;
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  padding: 1.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: rgb(42, 42, 42);
+  border-radius: 25px;
+  width: auto;
+  display: inline-block;
+  margin-right: 30px;
+  transition: 0.3s;
+}
+.point4:hover {
+  margin-top: 25px;
+  color: rgb(226, 226, 226);
+  font-family: Monsteralow, sans-serif;
+  padding: 1.5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: rgb(173, 86, 219);
+  border-radius: 25px;
+  width: auto;
+  display: inline-block;
+  margin-right: 30px;
+  transform: scale(1.1);
+}
+.textcontent2 {
+  color: rgb(200, 200, 200);
+  font-family: Monstera, sans-serif;
+  font-weight: 600;
+  font-size: 1.9em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.text2 {
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.downloadmenu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: nowrap;
+  background-color: rgb(42, 42, 42);
+  border-radius: 25px;
+}
+.downloadpoint {
+  margin-right: 15px;
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  padding: 1.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: rgb(42, 42, 42);
+  border-radius: 25px;
+}
+.cardstyle {
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.card {
+  font-family: Monsteralow, sans-serif;
+  color: aliceblue;
+  display: inline-block;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgb(11, 11, 11);
+  border-radius: 20px;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+.card:hover {
+  font-family: Monsteralow, sans-serif;
+  color: aliceblue;
+  display: inline-block;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgb(173, 86, 219);
+  border-radius: 20px;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  margin-top: 25px;
+  transform: scale(1.1);
+}
+.price {
+  font-size: 40px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.month {
+  font-size: 20px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.month2 {
+  font-size: 15px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.fqacontent {
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  display: flex;
+}
+.fqacontent2 {
+  color: rgb(200, 200, 200);
+  font-family: Monstera, sans-serif;
+  font-weight: 600;
+  font-size: 1.9em;
+  margin: 0;
+  display: flex;
+  margin-top: 50px;
+}
+.regioncontent {
+  color: rgb(200, 200, 200);
+  font-family: Monstera, sans-serif;
+  font-weight: 600;
+  font-size: 1.9em;
+  margin: 0;
+  display: flex;
+  margin-top: 50px;
+  justify-content: right;
+}
+.conteinregion {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: nowrap;
+}
+.regionblock {
+  list-style: none;
+  padding: 0;
+  width: 300px;
+}
+.region {
+  font-family: Monsteralow, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(200, 200, 200);
+  background-color: rgb(11, 11, 11);
+  padding: 5px;
+  margin: 10px;
+  border-radius: 20px;
+  height: auto;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+  transition: 0.3s;
+}
+.region:hover {
+  font-family: Monsteralow, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(200, 200, 200);
+  background-color: rgb(173, 86, 219);
+  padding: 5px;
+  margin: 10px;
+  border-radius: 20px;
+  height: auto;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+  transform: scale(1.1);
+}
+.country {
+  padding-top: 2px;
+  width: 40px;
+  height: 40px;
+  padding-right: 8px;
+}
+.countryname {
+  width: 110px;
+}
+.download {
+  margin-right: 15px;
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  padding: 0.5%;
+  padding-left: 3.5%;
+  padding-right: 4.5%;
+  background-color: rgb(173, 86, 219);
+  border-radius: 25px;
+  transition: 0.3s;
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  transition: 0.3s;
+}
+.download:hover {
+  margin-right: 15px;
+  color: rgb(200, 200, 200);
+  font-family: Monsteralow, sans-serif;
+  padding: 0.5%;
+  padding-left: 3.5%;
+  padding-right: 4.5%;
+  background-color: rgb(173, 86, 219);
+  border-radius: 25px;
+  transition: 0.3s;
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  transform: scale(1.1);
+}
+.bottomd {
+  margin-left: 7px;
+}
+.zagruzka {
+  padding-top: 5px;
+  width: 35px;
+  height: 35px;
+  padding-right: 8px;
+}
